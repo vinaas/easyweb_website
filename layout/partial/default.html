@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- PAGE TITLE -->
+    <title>{{title}}</title>
+    <!-- MAKE IT RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="description" content="{{site.description}}">
+    <meta name="author" content="{{site.author}}">
+    <meta name="keywords" content="">
+    <!-- FAVICON -->
+    <!--<link rel="shortcut icon" href="images/favicon.png" />-->
+
+    <style >html.wait {
+    	cursor: wait !important;
+    	opacity: 0;
+    	transition: opacity 0.5s ease;
+    }</style>
+    <link  rel="stylesheet" href="{{site.ref_url}}/css/bootstrap.min.css" /><link  rel="stylesheet" href="{{site.ref_url}}/css/animate.min.css" /><link  rel="stylesheet" href="{{site.ref_url}}/css/font-awesome.min.css" /><link  rel="stylesheet" href="{{site.ref_url}}/css/font-awesome.min.css" /><link  rel="stylesheet" href="{{site.ref_url}}/style.css" /><link  rel="stylesheet" href="{{site.ref_url}}/css/options.css" /><link  rel="stylesheet" href="{{site.ref_url}}/css/responsive.css" />
+
+   <!-- FONTS -->
+   <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div id="page">
+        <!-- START HEADER -->
+        {{#if homePage}}
+          <header id="header" class="big with-separation-bottom">
+        {{else}}
+          <header id="header" class="small with-separation-bottom">
+        {{/if}}
+
+            <!-- POINTER ANIMATED -->
+            <canvas id="header-canvas"></canvas>
+            {{#block "top-nav"}}
+              {{> top-nav}}
+            {{/block}}
+
+            {{#block "navigation"}}
+              {{> navigation}}
+            {{/block}}
+
+            {{#if homePage}}
+              {{#block "slider"}}
+                {{> slider}}
+              {{/block}}
+            {{else}}
+              {{#block "slider"}}
+                {{> bg-detail}}
+              {{/block}}
+            {{/if}}
+
+
+            <!-- <% if @document.isIndex: %>
+              <%- @partial('slider') %>
+            <% else: %>
+              <%- @partial('bg-detail') %>
+            <% end %> -->
+
+        </header>
+        <!-- END HEADER -->
+
+{{#block "main"}}
+  {{{contents}}}
+{{/block}}
+
+      <!-- START FOOTER -->
+      <footer id="footer" class="with-separation-top">
+          <aside id="widgets" class="container">
+              <div class="row">
+                  <!-- WIDGET -->
+                  <div class="col-md-4 widget animate-me fadeInLeft">
+                      <img src="{{site.ref_url}}/images/logo-footer.png" id="footer-logo" alt="Logo footer">
+                      <p>{{{site.description}}}</p>
+                  </div>
+                  <!-- WIDGET -->
+                  <div class="col-md-4 widget animate-me fadeInUp">
+                      <h4>Danh mục</h4>
+                      <ul>
+                        {{#each menu_left}}
+                          <li><a href="{{this.href}}">{{this.name}}</a></li>
+                        {{/each}}
+                        {{#each menu_right}}
+                          <li><a href="{{this.href}}">{{this.name}}</a></li>
+                        {{/each}}
+                      </ul>
+                  </div>
+                  <!-- WIDGET -->
+                  <div class="col-md-4 widget animate-me fadeInRight">
+                      <h4>Liên hệ</h4>
+                      <ul class="contact-informations">
+                          <li class="contact-address">305 Hồng Lạc, Phường 10, Quận Tân Bình, TP Hồ Chí Minh </li>
+                          <li class="contact-phone"> contact@vinaas.com </li>
+                      </ul>
+                      <ul class="widget-social">
+                          <!-- ALL ICONS AVAILABLE ->http://fortawesome.github.io/Font-Awesome/icons/#brand-->
+                          <li><a href="#"><i class="fa fa-facebook"></i></a>
+                          </li>
+                          <li><a href="#"><i class="fa fa-twitter"></i></a>
+                          </li>
+                          <li><a href="#"><i class="fa fa-skype"></i></a>
+                          </li>
+                      </ul>
+                      <a href="contact.html" class="btn btn-default"><i class="fa fa-envelope-o"></i> Contact Form</a>
+                  </div>
+              </div>
+          </aside>
+          <div id="copyright" class="animate-me fadeInUp">
+              <div class="container">
+                  <p>&#169; 2016. {{site.title}}</p>
+                  <!-- <ul id="footer-navigation">
+                      <li><a href="page.html">Terms of Use</a>
+                      </li>
+                      <li><a href="page.html">Privacy Policy</a>
+                      </li>
+                      <li><a href="contact.html">Contact Us</a>
+                      </li>
+                  </ul> -->
+              </div>
+          </div>
+      </footer>
+      <!-- END FOOTER -->
+
+      <!-- SCROLL TOP -->
+      <a href="#" id="scroll-top" class="fadeInRight animate-me"><i class="fa fa-angle-double-up"></i></a>
+  </div>
+      <script defer="defer"  src="{{site.ref_url}}/js/jquery-1.11.1.min.js"></script>
+      <script defer="defer"  src="{{site.ref_url}}/js/plugins.js"></script>
+      <script defer="defer"  src="{{site.ref_url}}/js/custom.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+{{#extend "default"}}
+  {{#content "main"}}
+
+  <!-- START MAIN CONTAINER -->
+  <!-- START MAIN CONTAINER -->
+	  	<div class="main-container">
+	  		<div id="contact-container" class="container">
+	  			<!-- SKILLS -->
+	  			<h2 class="with-breaker animate-me fadeInUp">
+		  			Contact <span>Let's get in touch</span>
+	  			</h2>
+	  			<p class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae dictum ex. Donec nec efficitur ligula. Nullam placerat et erat at ullamcorper. <span class="surline">Fusce quam elit</span>, posuere sit amet libero ut, aliquam vestibulum tellus. Praesent vehicula viverra nisl, nec tristique tellus posuere ac. Praesent eu viverra ligula. Mauris nec pellentesque nisi.</p>
+	  			<div class="row">
+	  				<div class="col-md-6">
+	  					<!-- Google Map -->
+	  					<div id="GoogleMap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d3919.3251388825024!2d106.64276626931155!3d10.786390603624092!3m2!1i1024!2i768!4f13.1!2m1!1zMzA1IEjhu5NuZyBM4bqhYywgUGh1b25nIDEwICwgUXXhuq1uIFTDom4gQsOsbmgsIEhDTQ!5e0!3m2!1svi!2s!4v1410236434857" width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" ></iframe>
+                        </div>
+	  				</div>
+	  				<div class="col-md-6">
+	  					<!-- FORMS -->
+	  					<form id="contact-form" method="post" action="contact_processing.php" class="form-horizontal">
+							<!-- NAME -->
+							<div class="control-group row">
+								<label class="control-label col-md-3" for="contact-name">Name</label>
+								<div class="controls col-md-9">
+									<input id="contact-name" name="contact-name" type="text" placeholder="Barack Obama" class="input-xlarge form-control" required="">
+								</div>
+							</div>
+							<!-- EMAIL -->
+							<div class="control-group row">
+								<label class="control-label col-md-3" for="contact-email">Email</label>
+								<div class="controls col-md-9">
+									<input id="contact-email" name="contact-email" type="text" placeholder="barack.obama@cia.gouv" class="input-xlarge form-control" required="">
+								</div>
+							</div>
+							<!-- TOPIC -->
+							<div class="control-group row">
+								<label class="control-label col-md-3" for="contact-topic">Topic</label>
+								<div class="controls col-md-9">
+									<select id="contact-topic" name="contact-topic" class="input-xlarge form-control">
+										<option>Request an estimate</option>
+										<option selected="selected">Question</option>
+										<option>Charity Website</option>
+										<option>Support</option>
+										<option>Other</option>
+									</select>
+								</div>
+							</div>
+							<!-- MESSAGE -->
+							<div class="control-group row">
+								<label class="control-label col-md-3" for="contact-message">Message</label>
+								<div class="controls col-md-9">
+									<textarea id="contact-message" name="contact-message" class=" form-control" rows="5">We are eager to hear from you !</textarea>
+								</div>
+							</div>
+							<!-- CAPTCHA -->
+							
+							<!-- BUTTON -->
+							<div class="control-group text-right">
+							 	<input type="hidden" name="submitted" id="submitted" value="true" />
+							 	<button type="submit" class="btn btn-default" name="submitted"><i class="fa fa-paper-plane-o"></i> Send</button>
+							</div>
+						</form>
+	  				</div>
+	  			</div>
+	  		</div>
+	  		<!-- CUSTOM CONTAINER -->
+	  		<section class="custom-section-container with-separation-bottom with-separation-top">
+		  		<div class="container">
+			  		<div class="custom-section-text">
+				  		<h2 class="animate-me fadeInLeft">ĐẾN VỚI CHÚNG TÔI</h2>
+				  		<p class="animate-me fadeInLeft">Công ty TNHH Phần mềm Tiên Tiến Việt Nam, VinaAS Co.,Ltd </p>
+                        <p>305 Hồng Lạc, Phường 10  Quận Tân Bình, TP Hồ Chí Minh</p>
+
+			  		</div>
+			  		<div class="custom-section-buttons">
+				  		<a href="/" class="btn btn-default animate-me fadeInRight"><i class="fa fa-book"></i>Tìm hiểu thêm</a>
+				  		<a href="#" class="btn btn-default animate-me fadeInRight"><i class="fa fa-paper-plane"></i> Đặt câu hỏi</a>
+			  		</div>
+		  		</div>
+	  		</section>
+	  	</div>
+  <!-- END MAIN CONTAINER -->
+
+
+  {{/content}}
+{{/extend}}

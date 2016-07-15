@@ -1,0 +1,79 @@
+[
+    {
+        "name": "title",
+        "displayName": "title",
+        "type": "Text",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "slug",
+        "displayName": "slug",
+        "type": "Text",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "description",
+        "displayName": "description",
+        "type": "Text",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "layout",
+        "displayName": "layout",
+        "type": "Text",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "permalink",
+        "displayName": "permalink",
+        "type": "Boolean",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "function",
+        "displayName": "function",
+        "type": "Text",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "homePage",
+        "displayName": "homePage",
+        "type": "Boolean",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "sliders",
+        "displayName": "sliders",
+        "type": "Array",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "three_services",
+        "displayName": "three_services",
+        "type": "Array",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "contact_block",
+        "displayName": "contact_block",
+        "type": "Object",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "ticker",
+        "displayName": "ticker",
+        "type": "Object",
+        "validations": [],
+        "required": false
+    }
+]

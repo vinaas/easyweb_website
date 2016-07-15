@@ -1,0 +1,38 @@
+{
+  "title": "EasyWebHub Advanced Template",
+  "menu_left": [
+        {
+          "name": "Trang chủ",
+          "href": "/",
+          "section": "home", "sub": "Giới thiệu Vinaas"
+        },
+        {
+          "name": "Dự Án",
+          "href": "/portfolio",
+          "section": "product","sub": "Đã thực hiện"
+        },
+        {
+          "name": "Dịch vụ",
+          "href": "/dichvu.html",
+          "section": "service", "sub": "Cho khách hàng"
+        }
+
+      ],
+     "menu_right" : [
+       {
+         "name": "Về chúng tôi",
+         "href": "/aboutus",
+         "section": "about", "sub": "We are family"
+       },
+       {
+         "name": "Bài viết",
+         "href": "/baiviet.html",
+         "section": "blog", "sub": "Chia sẻ kiến thức"
+       },
+       {
+         "name": "Liên hệ",
+         "href": "/contact",
+         "section": "lienhe", "sub": "Lets coffee"
+       }
+     ]
+}

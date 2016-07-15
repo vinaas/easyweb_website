@@ -1,0 +1,167 @@
+{{#extend "default"}}
+  {{#content "main"}}
+
+  <!-- START MAIN CONTAINER -->
+    <div class="main-container">
+      <div class="container">
+        <!-- ABOUT -->
+        <h2 class="with-breaker animate-me fadeInUp">
+          About Us <span>Yep, we rock !</span>
+        </h2>
+        <div class="row">
+          <div class="col-md-8">
+            <h3>Our History</h3>
+            <p class="text-justify"><span class="dropcap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus velit lectus, ac tincidunt sapien ornare nec. Nunc tempus sodales mi. Integer posuere pulvinar congue. Nullam vitae quam leo. In lacinia felis quis nulla fringilla, sit amet vehicula enim placerat. Phasellus eleifend dignissim dolor quis gravida. Pellentesque vel ante a dolor imperdiet gravida. Suspendisse sed erat sit amet dolor porttitor ornare id vel urna. Ut accumsan eros at sem aliquet, feugiat faucibus ante sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla eleifend tincidunt nunc, nec condimentum nibh lobortis ornare. Phasellus sit amet molestie leo.</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Our philosophy</h3>
+            <blockquote>Suspendisse mauris nulla, blandit dictum ligula sagittis, laoreet interdum mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam bibendum convallis velit quis fermentum.</blockquote>
+          </div>
+        </div>
+        <hr>
+
+        <div class="container">
+	  			<!-- SKILLS -->
+	  			<h2 class="with-breaker animate-me fadeInUp">
+		  			Our Skills
+	  			</h2>
+	  			<p class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae dictum ex. Donec nec efficitur ligula. Nullam placerat et erat at ullamcorper.</p>
+	  			<div class="tabs-container">
+	  				<ul class="nav nav-tabs" role="tablist" id="SkillsTab">
+              {{#each skills}}
+                {{#if @first}}
+                  <li class="active">
+                {{else}}
+                  <li>
+                {{/if}}
+                <a href="#{{this.id}}" role="tab" data-toggle="tab"><i class="fa fa-envelope-o"></i> {{this.name}}</a></li>
+              {{/each}}
+						</ul>
+
+					<div class="tab-content">
+            {{#each skills}}
+            {{#if @first}}
+              <div class="tab-pane active bounceInRight" id="{{this.id}}">
+            {{else}}
+              <div class="tab-pane bounceInRight" id="{{this.id}}">
+            {{/if}}
+              <h2><i class="fa fa-star-o"></i>{{this.name}}</h2>
+                <p class="text-justify">{{this.description}}</p>
+              <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                      {{#each this.list}}
+                        <li>{{this}}</li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul>
+                      <li>Quisque quis lacinia augue</li>
+                      <li>Nunc nec vulputate massa</li>
+                      <li>eget elementum libero</li>
+                      <li>Etiam at dapibus lectus</li>
+                      <li>Suspendisse suscipit</li>
+                    </ul>
+                  </div>
+              </div>
+              <div class="text-left">
+                <a href="#" class="btn btn-default"><i class="fa fa-home"></i> Button Example</i></a>
+              </div>
+            </div>
+            {{/each}}
+
+					</div>
+					<script>
+					  $(function () {
+					    	$('#SkillsTab a').click(function (e) {
+						  		e.preventDefault()
+						  		$(this).tab('show')
+							});
+					  });
+					</script>
+	  			</div>
+	  		</div>
+
+        <!-- TEAM SHORTCODE -->
+        <div id="team-container" class="row">
+          <div class="col-md-3 team-single">
+            <img src="/images/team/team_01.jpg" alt="Profile Image" class="animate-me bounceIn">
+            <h3 class="center">Teammate 1</h3>
+            <p>Duis condimentum dignissim porttitor. Nulla libero metus, mattis eget pellentesque nec, iaculis non libero.</p>
+            <ul class="social-list">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-git"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 team-single">
+            <img src="/images/team/team_01.jpg" alt="Profile Image" class="animate-me bounceIn">
+            <h3 class="center">Teammate 2</h3>
+            <p>Duis condimentum dignissim porttitor. Nulla libero metus, mattis eget pellentesque nec, iaculis non libero.</p>
+            <ul class="social-list">
+              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 team-single">
+            <img src="/images/team/team_01.jpg" alt="Profile Image" class="animate-me bounceIn">
+            <h3 class="center">Teammate 3</h3>
+            <p>Duis condimentum dignissim porttitor. Nulla libero metus, mattis eget pellentesque nec, iaculis non libero.</p>
+            <ul class="social-list">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 team-single">
+            <img src="/images/team/team_01.jpg" alt="Profile Image" class="animate-me bounceIn">
+            <h3 class="center">Teammate 4</h3>
+            <p>Duis condimentum dignissim porttitor. Nulla libero metus, mattis eget pellentesque nec, iaculis non libero.</p>
+            <ul class="social-list">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+
+      <div class="container">
+        <!-- CUSTOMER REVIEWS -->
+        <h2 class="with-breaker animate-me fadeInUp">
+          Get In Touch<span>What are you waiting for ?</span>
+        </h2>
+      </div>
+      <!-- CUSTOM CONTAINER -->
+      <section class="contact-container with-separation-bottom with-separation-top">
+        <div class="contact-boxes">
+          <div class="contact-box contact-box-email animate-me zoomIn">
+            <h2>Email</h2>
+            <p>Write us a few lines about your ideas, your projects and let's advance together.</p>
+            <a href="contact.html" class="btn btn-default"><i class="fa fa-envelope"></i> Email Us</a>
+          </div>
+          <div class="contact-box contact-box-twitter animate-me zoomIn">
+            <h2>Twitter</h2>
+            <p>Follow us to interact, chat and share our ideas on Twitter.</p>
+            <a href="#" class="btn btn-default"><i class="fa fa-twitter"></i> Follow us</a>
+          </div>
+          <div class="contact-box contact-box-facebook animate-me zoomIn">
+            <h2>Facebook</h2>
+            <p>Like our page and send us message directly from our brand new Facebook page.</p>
+            <a href="#" class="btn btn-default"><i class="fa fa-facebook"></i> Like Our Page</a>
+          </div>
+          <div class="contact-box contact-box-skype animate-me zoomIn">
+            <h2>Skype</h2>
+            <p>Call us or chat with us on Skype whenever you like, do not hesitate.</p>
+            <a href="#" class="btn btn-default"><i class="fa fa-skype"></i> Call Us</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- END MAIN CONTAINER -->
+
+  {{/content}}
+{{/extend}}
